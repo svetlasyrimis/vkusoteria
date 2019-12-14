@@ -157,7 +157,7 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    background: #1b1b1b59;
+    background: #1b1b1bf5;
     
   }
 
@@ -167,12 +167,12 @@ body {
 
 
   .bm-menu-wrap {
-    background: #02020259;
+    background: #f3eeee59;
   }
   .bm-burger-button{
     
     position: absolute;
-    color:white;
+    color:rgb(226, 224, 224);
     left: 14px;
     top: 13px;
     width: 9.5%;

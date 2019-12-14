@@ -41,7 +41,7 @@ class NavBarBurger extends React.Component {
 
      
        
-        <Menu right disableAutoFocus isOpen={this.state.menuOpen} customOnKeyDown={this.closeAllMenusOnEsc} 
+        <Menu left disableAutoFocus isOpen={this.state.menuOpen} customOnKeyDown={this.closeAllMenusOnEsc} 
           onStateChange={(state) => { this.handleStateChange(state) }} onClick={()=> this.closeMenu()}>
           
             <a id="home" className="menu-item" to="/" onClick={() => this.closeMenu()}>Home</a>
