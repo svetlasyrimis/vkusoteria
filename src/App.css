@@ -396,7 +396,7 @@ body {
   and (-webkit-min-device-pixel-ratio: 2) {
 
     .section {
-      display: unset;
+      display: block;
       padding:10px;
     }
 
