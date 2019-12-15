@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { stack as Menu } from 'react-burger-menu';
+import { bubble as Menu } from 'react-burger-menu';
 
 class NavBarBurger extends React.Component {
   constructor(props) {

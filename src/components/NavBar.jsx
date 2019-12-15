@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import NavBarBurger from './NavBarBurger'
+import vkusoteria from '../site-pics/vkusoteria.jpg';
 
 function NavBar() {
   
@@ -10,6 +11,7 @@ function NavBar() {
     return (
      
       <header>
+        <img src={vkusoteria}alt="header-image"/>
         <div className="burger-menu">
           <NavBarBurger />
         </div>
