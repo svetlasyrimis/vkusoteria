@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 header {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.10);
@@ -12,6 +16,7 @@ header {
   left: 0;
   background: black;
   background-color: rgba(0, 0, 0, 0.72);
+
 }
 
 header img {
@@ -93,9 +98,19 @@ a:hover {
   margin-top:20px;
   padding: 30px;
   text-align: center;
-  height: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: #C6CAD3;
   color: rgb(29, 27, 27);
+}
+.section img {
+  object-fit: cover;
+  height: 340px;
+  /* width: 96%; */
+  align-self: center;
 }
 
 .section p {
@@ -116,14 +131,12 @@ body {
 }
 
 .left-nav {
-  /* background-color: blue; */
   flex-grow:1;
   justify-content: left;
   padding:30px;
 }
 
 .right-nav {
-  /* background-color: blue; */
   display: flex;
   justify-content: space-around;
   width: 40%;
@@ -140,9 +153,32 @@ body {
   display: none;
 }
 
-/* .bm-burger-button {
-  visibility: hidden;
-} */
+
+.pic-section p {
+  text-align: center;
+  color: #747474;
+  font-size: 36px;
+  /* margin-bottom: 1.6em; */
+}
+
+.gallery {
+  display: grid;
+  grid-template-rows: 350px 350px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px 25px;
+  padding: 10px;
+}
+
+
+
+.gallery img {
+  object-fit: cover;
+  /* height: 340px; */
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+}
+
 @media screen and (min-width: 650px) {
   .burger-menu,.bm-menu { display: none; } 
 }
@@ -156,7 +192,7 @@ body {
     display:block;
     padding: 0;
     height: 80vh;
-    /* background-position: 70% 50%; */
+    margin-bottom: 10px;
   }
 
   
@@ -189,18 +225,6 @@ body {
 
 
   .bm-burger-button{
-    
-    /* position: absolute;
-    color:rgb(226, 224, 224);
-    left: 14px;
-    top: 13px;
-    width: 9.5%;
-    height: 4.5%;
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-size: 0;
-    background: transparent; */
     cursor: pointer;
     position: fixed;
     z-index: 10;
@@ -209,9 +233,6 @@ body {
     height: 30px;
     left: 36px;
     top: 36px;
-
-    
-    
   }
 
   .bm-burger-button button {
@@ -254,6 +275,9 @@ body {
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+    body {
+      overflow-x: hidden;
+    }
     header img {
       padding-top: 50px
     }
@@ -295,17 +319,6 @@ body {
 
     .bm-burger-button{
     
-      /* position: absolute;
-      color:rgb(226, 224, 224);
-      left: 14px;
-      top: 13px;
-      width: 9.5%;
-      height: 4.5%;
-      margin: 0;
-      padding: 0;
-      border: none;
-      font-size: 0;
-      background: transparent; */
       cursor: pointer;
       position: fixed;
       z-index: 10;
@@ -352,6 +365,17 @@ body {
    
     .bm-item-list {
       height:70%
+    }
+
+    .section {
+      display: block;
+    }
+    .section  img {
+      width: auto;
+      height: 240px;
+    }
+    .gallery {
+      display:unset;
     }
 }
   

@@ -1,9 +1,13 @@
-import * as imageSrc from '../img';
-
+// import * as assets from './assets';
 
 
 function importAll(r) {
-  return r.keys().map(r);
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  // debugger;
+  return images;
 }
 
-const images = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
+
+export default images
