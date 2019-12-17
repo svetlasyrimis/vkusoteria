@@ -6,7 +6,8 @@ export default function Gallery() {
   
   return (
     
-    <div className="gallery">
+    <div className="gallery" id="gallery">
+      <p>Gallery</p>
       {pics.map((pic) => <img className="gallery-pic" src={pic}/>)}
     </div>
   )

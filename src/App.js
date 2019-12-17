@@ -5,6 +5,9 @@ import Section from "./components/Section"
 import BurgerMenu from './components/BurgerMenu';
 import NavBarBurger from './components/NavBarBurger';
 import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import { animateScroll as scroll } from "react-scroll";
+import { scroller } from "react-scroll";
 
 class App extends React.Component {
   constructor() {
@@ -14,14 +17,35 @@ class App extends React.Component {
     }
   }
 
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+  scrollToBottom = () => {
+    scroll.scrollToBottom();
+  }
+  
+  scrollTo(element,offset) {
+    scroller.scrollTo(element, {
+      activeClass:"active",
+      duration: 700,
+      delay: 0,
+      // smooth: true,
+      spy: true,
+      smooth: 'easeInOutQuart',
+      offset: offset
+    })
+  }
+
 
   render() {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar scrollToTop={this.scrollToTop} scrollToBottom={this.scrollToBottom} scrollTo={this.scrollTo}/>
         {/* <BurgerMenu/> */}
         <Section />
-        <Gallery/>
+        <Gallery />
+        <Contact />
       </div>
     );
   }
