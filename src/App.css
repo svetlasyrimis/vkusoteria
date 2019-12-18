@@ -1,10 +1,17 @@
+
+
 body {
   overflow-x: hidden;
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Courgette', cursive;
+
 }
 
+/* Header */
 header {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.10);
+  /* background-color: rgba(0, 0, 0, 0.10); */
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -15,7 +22,7 @@ header {
   right: 0;
   left: 0;
   background: black;
-  background-color: rgba(0, 0, 0, 0.72);
+  /* background-color: rgba(0, 0, 0, 0.72); */
 
 }
 
@@ -31,6 +38,8 @@ header img {
   bottom: 0;
   content: "";
 } */
+
+/* Navbar */
 .navbar {
   background-color: rgba(0, 0, 0, 0.349);
   width: 100%;
@@ -50,6 +59,20 @@ header img {
 }
 .navbar::-webkit-scrollbar{
   transition: background-color 0.2s ease-in-out;
+}
+
+.left-nav {
+  flex-grow:1;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding:30px;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }
 
 span {
@@ -87,6 +110,8 @@ a:before {
   transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+
+
 }
 
 a:hover:before {
@@ -101,6 +126,7 @@ a:hover {
   font-weight: 600;
 }
 
+/* About us Section */
 .section {
   margin-top:20px;
   padding: 30px;
@@ -124,10 +150,6 @@ a:hover {
   padding: 10px;
 }
 
-body {
-  background-color: black;
-  transition: all 0.2s ease-in-out;
-}
 
 .title {
   font-size: 64px;
@@ -137,29 +159,59 @@ body {
   margin-block-start: 0;
 }
 
-.left-nav {
-  flex-grow:1;
-  display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-  padding:30px;
-}
-
-.right-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-}
-
-
-
+/* Burger menu */
 .bm-menu-wrap {
   top:0;
 }
 
-
 .bm-overlay {
   display: none;
+}
+
+.bm-burger-button{
+  cursor: pointer;
+  position: fixed;
+  z-index: 10;
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-burger-button button {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  font-size: 0px;
+  background: transparent;
+  cursor: pointer;
+}
+.bm-overlay {
+  color: #373a47;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-burger-button span, .bm-cross-button span{
+  background-color:white;
+  
+}
+
+ .bm-burger-bars {
+  height: 12% !important;
+  text-decoration: none;
+}
+
+.bm-item-list {
+  height:70%
 }
 
 /*Gallery*/
@@ -188,7 +240,7 @@ body {
   align-self: center;
 }
 
-.gallery p {
+.gallery-text {
   color:wheat;
   text-align: center;
   font-size: 24px;
@@ -198,7 +250,49 @@ body {
 
 .contact-info {
   height: 40vh;
+  display: flex;
+  justify-content: space-around;
 }
+
+.contact-info img {
+  height: 300px;
+  width: 400px;
+}
+
+/* Footer */
+
+
+footer {
+  background-color: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  color: white;
+  /* position: fixed; */
+  bottom:0;
+  z-index: 10;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Courgette', cursive;
+  
+
+}  
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 650px) {
   .burger-menu,.bm-menu { display: none; } 
@@ -257,51 +351,7 @@ body {
 }
 
 
-  .bm-burger-button{
-    cursor: pointer;
-    position: fixed;
-    z-index: 10;
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
-  }
-
-  .bm-burger-button button {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    font-size: 0px;
-    background: transparent;
-    cursor: pointer;
-  }
-  .bm-overlay {
-    color: #373a47;
-  }
-
-  .bm-morph-shape {
-    fill: #373a47;
-  }
   
-  .bm-burger-button span, .bm-cross-button span{
-    background-color:white;
-    
-  }
-
-   .bm-burger-bars {
-    height: 12% !important;
-    text-decoration: none;
-  }
- 
-  .bm-item-list {
-    height:70%
-  }
 
 /* Media query Iphone 6,7,8 portrait and landscape */
 @media only screen 

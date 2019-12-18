@@ -6,6 +6,7 @@ import BurgerMenu from './components/BurgerMenu';
 import NavBarBurger from './components/NavBarBurger';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import { animateScroll as scroll } from "react-scroll";
 import { scroller } from "react-scroll";
 
@@ -44,8 +45,10 @@ class App extends React.Component {
         <NavBar scrollToTop={this.scrollToTop} scrollToBottom={this.scrollToBottom} scrollTo={this.scrollTo}/>
         {/* <BurgerMenu/> */}
         <Section />
+        <p className="gallery-text">Gallery</p>
         <Gallery />
         <Contact />
+        <Footer />
       </div>
     );
   }

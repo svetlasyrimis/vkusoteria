@@ -25,10 +25,10 @@ function NavBar(props) {
 
             </div>
           <div className="right-nav">
-            <a href="#about" >За нас</a>
-            <a href="#menu">Меню</a>
-            <a href="#gallery">Галерия</a>
-            <a href="#contact">Контакт</a>
+            <a href="#about" onClick={() => props.scrollTo('about', -70)}>За нас</a>
+            <a href="#menu" onClick={() => props.scrollTo('menu', 100)}>Меню</a>
+            <a href="#gallery" onClick={() => props.scrollTo('gallery-text', -100)}>Галерия</a>
+            <a href="#contact" onClick={() => props.scrollTo('contact', -50)}>Контакт</a>
             </div>
            
         </div>
